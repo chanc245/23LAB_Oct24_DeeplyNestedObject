@@ -1,3 +1,4 @@
+==========
 IDEA ONE:
 Language: English 
 
@@ -11,9 +12,9 @@ My frist encounter with "English"
 - For a semester or two, I remember myself struggling with class time and homework in English. But as time goes on, I realize that I can slowly understand the teacher more and more, and it takes me less effort to do homework.
 
 
-
+==========
 IDEA TWO:
-Simbol: Octopus 
+Symbol: Octopus 
 
 My name in chinese sounds like Octopus head. 
 
