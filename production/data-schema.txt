@@ -1,0 +1,34 @@
+##Data Schema:
+ octo = object
+  nameEnglish: object
+  -name1: string
+  -name2: string
+
+  nameChinese: object
+  -name1: string
+  -name2: string
+
+  changeNameAge: number
+
+  oldNameUse: boolean,
+
+  newNameUse: boolean,
+
+  octopodaFamily: array,
+
+  memories: object
+  -name1Memory: string
+  -name2Memory: string
+
+  octopusFact: object
+  -Fact1: string
+    (facts inbetween)
+  -Fact25: string
+
+  whatNameAtAge: function
+
+  randomOctoFact: function
+
+  nameInChinese: function
+
+  nameInEnglish: function 
