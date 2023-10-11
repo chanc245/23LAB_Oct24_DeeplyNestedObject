@@ -1,4 +1,4 @@
-const octopoda = {
+const octo = {
   nameEnglish: {
     name1: "Jia-Yu Chang",
     name2: "Yu-Tung, Chang"
@@ -71,7 +71,7 @@ const octopoda = {
     let nameEnglish = "";
     let order;
 
-    if (age >= 15) {
+    if (age <= 15) {
       nameChinese = this.nameChinese.name1;
       nameEnglish = this.nameEnglish.name1;
       order = "first";
@@ -85,38 +85,27 @@ const octopoda = {
   },
 
   randomOctoFact: function () {
-    let numberOfFacts = Object.keys(octopusFacts).length;
-    let randomFact = octopusFacts[`Fact${Math.floor(Math.random() * numberOfFacts) + 1}`];
+    let numberOfFacts = Object.keys(this.octopusFact).length;
+    let randomFact = this.octopusFact[`Fact${Math.floor(Math.random() * numberOfFacts) + 1}`];
 
-    console.log(`Your random octopus related fact of the day: ${randomFact}`);
+    console.log(`${randomFact}`);
   },
 
-  nameInChinese: function (name) {
-    if (name == 1) {
-      console.log(`Christine's first name ${this.nameEnglish.name1} in Chinese ${this.nameChinese.name1}`);
+  nameInChinese: function (nameType) {
+    if (nameType == 1) {
+      console.log(`Christine's first name ${this.nameEnglish.name1} in Chinese is ${this.nameChinese.name1}`);
     } else {
-      console.log(`Christine's second name ${this.nameEnglish.name2} in Chinese ${this.nameChinese.name2}`);
+      console.log(`Christine's second name ${this.nameEnglish.name2} in Chinese is ${this.nameChinese.name2}`);
     }
   },
 
-  nameInEnglish: function (name) {
-    if (name == 1) {
-      console.log(`Christine's first name ${this.nameChinese.name1} in English ${this.nameEnglish.name1}`);
+
+  nameInEnglish: function (nameType) {
+    if (nameType == 1) {
+      console.log(`Christine's first name ${this.nameChinese.name1} in English is ${this.nameEnglish.name1}`);
     } else {
-      console.log(`Christine's second name ${this.nameChinese.name2} in English ${this.nameEnglish.name2}`);
+      console.log(`Christine's second name ${this.nameChinese.name2} in English is ${this.nameEnglish.name2}`);
     }
   }
 
 }
-
-//// - Be at least 100 lines of code.
-//// - Have at least 10 properties at the top level.
-//// - Have at least 3 nested properties (object within object).
-//// - Have at least 2 functions.
-//// - Incorporate all of the following data types: 
-//// Number, 
-//// String, 
-//// Boolean, 
-//// Function, 
-//// Object, 
-//// Array
