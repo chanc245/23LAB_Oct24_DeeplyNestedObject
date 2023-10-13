@@ -38,6 +38,13 @@ const octo = {
     "Vitreledonellidae"
   ],
 
+  octoFamilyDescription: {
+    Alloposidae: {
+      description: "",
+      distribution: ""
+    }
+  },
+
   octopusFact: [
     "Octopuses live in oceans all over the world. Most are pelagic, meaning they live near the water's surface in shells, reefs and crevices. Some species live on the floor of the ocean, making their homes out of caves.",
     "Octopuses tend to be solitary, though they do interact with other octopuses at times. Some species of octopuses hunt at night, while others only hunt at dusk and dawn.",
@@ -88,7 +95,7 @@ const ask = {
 
       console.log(`When Christine was ${age} years old, her name was ${nameEnglish}, which in Chinese is ${nameChinese}, and that's her ${order} name.`);
     } else if (age > 22) {
-      console.log("Hey excuse me, I'm not THAT old just yet! careful with your input >:(");
+      console.log("Hey belkjsdsdflkj im typing stuff hehehahahha hello there im typing typing stuff laskdjf js");
     }
   },
 
