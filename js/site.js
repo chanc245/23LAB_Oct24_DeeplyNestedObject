@@ -42,6 +42,10 @@ const octo = {
     Alloposidae: {
       description: "",
       distribution: ""
+    },
+    Amphitretidae: {
+      description: "",
+      distribution: ""
     }
   },
 
