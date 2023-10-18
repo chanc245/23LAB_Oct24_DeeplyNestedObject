@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Lobster';
-  src: url('/fonts/Lobster/Lobster-Regular.ttf') format('truetype');
+  src: url('./fonts/Lobster/Lobster-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'TiltNeon';
-  src: url('/fonts/Tilt_Neon/static/TiltNeon-Regular.ttf') format('truetype');
+  src: url('./fonts/Tilt_Neon/static/TiltNeon-Regular.ttf') format('truetype');
 }
 
 html {
