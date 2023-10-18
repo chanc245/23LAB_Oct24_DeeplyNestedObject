@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url('/fonts/Lobster/Lobster-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TiltNeon';
+  src: url('/fonts/Tilt_Neon/static/TiltNeon-Regular.ttf') format('truetype');
+}
+
+html {
+  --s: 300px;
+  /* control the size */
+  --c1: #faf9f8;
+  --c2: #f3f3f9;
+
+  --_g:
+    var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%, var(--c1) 36% 45%,
+    var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%, var(--c2) 86% 95%,
+    #0000 96%;
+  background:
+    radial-gradient(50% 50% at 100% 0, var(--_g)),
+    radial-gradient(50% 50% at 0 100%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s)/2) calc(var(--s)/2) var(--c1);
+  background-size: var(--s) var(--s);
+
+  /* source: https://css-pattern.com/ */
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff4a;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+header h3 {
+  font-size: 20px;
+  margin: 10px 20px;
+}
+
+h1 {
+  font-family: 'Lobster', sans-serif;
+
+  text-align: center;
+  font-size: 80px;
+
+  margin-top: 40px;
+
+  color: rgb(53, 53, 77);
+}
+
+h2 {
+  font-family: 'Lobster', sans-serif;
+  font-size: 50px;
+
+  margin: 0;
+  padding: 0;
+
+  color: rgb(53, 53, 77);
+}
+
+
+h3 {
+  font-size: 30px;
+  font-family: 'TiltNeon', sans-serif;
+}
+
+
+p,
+ul {
+  font-family: 'TiltNeon', sans-serif;
+
+
+}
+
+.btn {
+  background-color: #c7c3ea;
+  color: rgb(32, 33, 127);
+
+  border: 3px solid rgba(169, 169, 169, 0);
+  padding: 10px 24px;
+  margin: 10px;
+  border-radius: 8px;
+
+  text-align: center;
+  text-decoration: none;
+  font-family: 'TiltNeon', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #9c9be5;
+  border: 3px solid rgb(111, 86, 238);
+}
+
+#octopus-list {
+  list-style: none;
+}
+
+#octopus-list li {
+  background-color: #ffffffaf;
+
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start;
+}
+
+#octopus-list img {
+  max-width: 100%;
+}
+
+li {
+  margin: 20px 0;
+}
+
+img,
+p,
+h2,
+ul {
+  margin: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

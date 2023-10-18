@@ -22,34 +22,87 @@ const allNames = {
 }
 
 const octo = {
-  octopodaFamily: [
-    "Alloposidae",
-    "Amphitretidae",
-    "Argonautidae",
-    "Bolitaenidae",
-    "Cirroteuthidae",
-    "Grimpoteuthididae",
-    "Idioctopodidae",
-    "Octopodidae",
-    "Ocythoidae",
-    "Opisthoteuthidae",
-    "Stauroteuthidae",
-    "Tremoctopodidae",
-    "Vitreledonellidae"
+  orderDescription: "The order called Octopoda refers to octopuses that consist of two eyes, four pairs of arms and bilateral symmetry (Encyclopedia of Life). An octopus is made up of a completely merged foot and head with a hard beak, and its mouth at the center of its muscular tentacles (Aquarium of the Pacific).",
+
+  types: [
+    "Dumbo Octopus",
+    "Mimic octopus",
+    "Blanket octopus",
+    "Giant Pacific octopus"
   ],
 
-  octoFamilyDescription: {
-    Alloposidae: {
-      description: "",
-      distribution: ""
+  typesDescription: [
+    {
+      title: "Dumbo Octopus",
+      id: "dumbo",
+      imgLink: "/image/dumbo/dumbo.jpeg",
+      gifLinks: [
+        "/image/dumbo/dumbo_1.gif",
+        "/image/dumbo/dumbo_2.gif",
+        // "/image/dumbo/dumbo_3.gif"
+      ],
+      description: "Grimpoteuthis is a genus of pelagic cirrate (finned) octopods known as the dumbo octopuses.",
+      facts: [
+        "The name 'dumbo' originates from their resemblance to the title character of Disney's 1941 film Dumbo, having two prominent ear-like fins which extend from the mantle above each eye.",
+        "The dumbo octopus (Grimpoteuthis ) is a deep sea animal that lives on the ocean floor at extreme depths of 9,800 to 13,000 feet.",
+        "They are small animals, around 8 inches tall, and have a pair of fins located on their mantle—their namesake—and webbing between their arms.",
+      ],
+      source: "https://ocean.si.edu/ocean-life/invertebrates/grimpoteuthis-dumbo-octopus#:~:text=The%20dumbo%20octopus%20(Grimpoteuthis%20)%20is,and%20webbing%20between%20their%20arms."
     },
-    Amphitretidae: {
-      description: "",
-      distribution: ""
-    }
-  },
 
-  octopusFact: [
+    {
+      title: "Mimic Octopus",
+      id: "mimic",
+      imgLink: "/image/mimic/mimic1.jpeg",
+      gifLinks: [
+        "/image/mimic/mimic_1.gif",
+        "/image/mimic/mimic_2.gif"
+      ],
+      description: "The mimic octopus (Thaumoctopus mimicus) is a species of octopus from the Indo-Pacific region. Like other octopuses, it uses its chromatophores to disguise itself with its background.",
+      facts: [
+        "The mimic octopus is a smaller octopus, growing to a total length of about 60 cm (2 ft), including arms, with a diameter approximately that of a pencil at their widest.",
+        "Small horns protrude from each eye. The octopus' natural color is light brown/beige, but it usually takes on a more noticeable hue of striped white and brown to scare off predators by imitating poisonous species and vicious, territorial sea creatures. Its ability to change shape is the reason it was named the 'mimic' octopus, which is its main defense besides camouflage.",
+        "The mimic octopus was first discovered off the coast of Sulawesi, Indonesia in 1998 on the bottom of a muddy river mouth.",
+        "The mimic octopus uses a jet of water through its funnel to glide over the sand while searching for prey, typically small fish, crabs, and worms."
+      ],
+      source: "https://en.wikipedia.org/wiki/Mimic_octopus"
+    },
+
+    {
+      title: "Blanket octopus",
+      id: "blanket",
+      imgLink: "/image/blanket/blanket.jpg",
+      gifLinks: [
+        "/image/blanket/blanket_1.gif",
+        "/image/blanket/blanket_2.gif"
+      ],
+      description: "Tremoctopus is a genus of pelagic cephalopods, containing four species that occupy surface to mid-waters in subtropical and tropical oceans.",
+      facts: [
+        "They are commonly known as blanket octopuses, in reference to the long, transparent webs that connect the dorsal and dorsolateral arms of the adult females. The other arms are much shorter and lack webbing.",
+        "Females may reach 2 m (6.6 ft) in length, whereas the males are 2.4 cm (1 inch). The weight ratio is at least 10,000:1, and can probably reach as much as 40,000:1. The males have a large arm in a spherical pouch modified for mating, known as a hectocotylus.",
+        "The common blanket octopus (Tremoctopus violaceus) exhibits one of the most extreme sexual size-dimorphism known in any animal near its size or larger."
+      ],
+      source: "https://en.wikipedia.org/wiki/Blanket_octopus"
+    },
+
+    {
+      title: "Giant Pacific octopus",
+      id: "giant",
+      imgLink: "/image/giant/giantPacific.jpg",
+      gifLinks: [
+        "/image/giant/giant_1.gif"
+      ],
+      description: "The giant Pacific octopus (Enteroctopus dofleini), also known as the North Pacific giant octopus, is a large marine cephalopod belonging to the genus Enteroctopus.",
+      facts: [
+        "Its spatial distribution includes the coastal North Pacific, along Mexico (Baja California), The United States (California, Oregon, Washington, and Alaska), Canada (British Columbia), Russia, Eastern China, Japan, and the Korean Peninsula.",
+        "It can be found from the intertidal zone down to 2,000 m (6,600 ft), and is best adapted to cold, oxygen-rich water.",
+        "It is arguably the largest octopus species."
+      ],
+      source: "https://en.wikipedia.org/wiki/Giant_Pacific_octopus"
+    }
+  ],
+
+  generalFact: [
     "Octopuses live in oceans all over the world. Most are pelagic, meaning they live near the water's surface in shells, reefs and crevices. Some species live on the floor of the ocean, making their homes out of caves.",
     "Octopuses tend to be solitary, though they do interact with other octopuses at times. Some species of octopuses hunt at night, while others only hunt at dusk and dawn.",
     "Octopus have three hearts and blue blood",
@@ -80,6 +133,47 @@ const octo = {
 
 }
 
+
+const octopusList = document.getElementById('octopus-list');
+const showInfoButton = document.getElementById('showOctopusInfo');
+
+showInfoButton.addEventListener('click', displayOctopusInfo);
+
+function displayOctopusInfo() {
+  octopusList.innerHTML = ''; // Clear existing list
+
+  octo.typesDescription.forEach(octopus => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+    <div class="box" id="${octopus.id}">
+    <br>
+      <h2>${octopus.title}</h2>
+      <img src="${octopus.imgLink}" alt="${octopus.title}">
+      <p>${octopus.description}</p>
+      <h3>Facts:</h3>
+      <ul>
+        ${octopus.facts.map(fact => `<li>${fact}</li>`).join('')}
+      </ul>
+      <a href="${octopus.source}" target="_blank">Learn More</a>
+      </div>
+    `;
+
+    //GIFs
+    const gifDiv = document.createElement('div');
+    octopus.gifLinks.forEach(gifLink => {
+      const gifImage = document.createElement('img');
+      gifImage.src = gifLink;
+      gifImage.alt = octopus.title;
+      gifDiv.appendChild(gifImage);
+    });
+
+    listItem.appendChild(gifDiv);
+
+    octopusList.appendChild(listItem);
+  });
+}
+
+
 const ask = {
   whatNameAtAge: function (age) {
     let nameChinese = "";
@@ -104,9 +198,9 @@ const ask = {
   },
 
   randomOctoFact: function () {
-    let numberOfFacts = octo.octopusFact.length;
+    let numberOfFacts = octo.generalFact.length;
     let randomIndex = Math.floor(Math.random() * numberOfFacts);
-    let randomFact = octo.octopusFact[randomIndex];
+    let randomFact = octo.generalFact[randomIndex];
 
     console.log(`${randomFact}`);
   },
@@ -127,4 +221,3 @@ const ask = {
     }
   }
 }
-
