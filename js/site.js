@@ -148,7 +148,7 @@ function displayOctopusInfo() {
     <div class="box" id="${octopus.id}">
     <br>
       <h2>${octopus.title}</h2>
-      <img src="${octopus.imgLink}" alt="${octopus.title}">
+      <img src="/23LAB_Oct24_DeeplyNestedObject${octopus.imgLink}" alt="${octopus.title}">
       <p>${octopus.description}</p>
       <h3>Facts:</h3>
       <ul>
@@ -162,7 +162,8 @@ function displayOctopusInfo() {
     const gifDiv = document.createElement('div');
     octopus.gifLinks.forEach(gifLink => {
       const gifImage = document.createElement('img');
-      gifImage.src = gifLink;
+      gifImage.src = "/23LAB_Oct24_DeeplyNestedObject" + gifLink;
+      // gifImage.src = gifLink;
       gifImage.alt = octopus.title;
       gifDiv.appendChild(gifImage);
     });
