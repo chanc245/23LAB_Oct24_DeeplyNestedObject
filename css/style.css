@@ -1,12 +1,5 @@
-@font-face {
-  font-family: 'Lobster';
-  src: url('./fonts/Lobster/Lobster-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'TiltNeon';
-  src: url('./fonts/Tilt_Neon/static/TiltNeon-Regular.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 html {
   --s: 300px;
@@ -85,13 +78,13 @@ h2 {
 
 h3 {
   font-size: 30px;
-  font-family: 'TiltNeon', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
 }
 
 
 p,
 ul {
-  font-family: 'TiltNeon', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
 
 
 }
@@ -107,7 +100,7 @@ ul {
 
   text-align: center;
   text-decoration: none;
-  font-family: 'TiltNeon', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
   font-size: 20px;
   display: inline-block;
   cursor: pointer;
