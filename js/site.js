@@ -115,13 +115,13 @@ const octo = {
     "An octopus has three hearts. One pumps blood through its organs; the two others pump blood through its gills, according to the World Animal Foundation. Octopus blood is blue because it has a copper-based protein called hemocyanin.",
     "When an octopus is swimming, the organ that delivers blood to the organs stops beating. This exhausts the octopus, which is likely the reason they prefer to crawl than swim, according to the Smithsonian article.",
     "Octopuses come in many different sizes. The common octopus (Octopus vulgaris) is 12 to 36 inches (30.5 to 91.4 centimeters) long and weighs 6.6 to 22 lbs. (3 to 10 kilograms).",
-    "The giant Pacific octopus (Enteroctopus dofleini) is the largest octopus. They typically grow to 16 feet (5 meters) long and weight around 110 lbs. (50 kg), but one was recorded to weigh more than 600 lbs. (272 kg) and measure 30 feet (9.1 m) across, according to National Geographic.",
+    "The giant Pacific octopus (Enteroctopus dofleini) is the largest octopus. They typically grow to 16 feet (5 meters) long and weight around 110 lbs. (50 kg), but one was recorded to weigh more than 600 lbs. (272 kg) and measure 30 feet (9.1 m) across.",
     "The smallest octopus is the Octopus wolfi. It is smaller than an inch (2.5 cm) long and weighs less than a gram.",
-    "When scared, octopuses will shoot a dark liquid, sometimes called ink, at the thing that scared them. This will temporarily blind and confuse a potential attacker, giving the octopus time to swim away. The ink can also dull the attacker’s smelling and tasting abilities, according to the Smithsonian article.",
-    "Octopuses can also change color to hide and match their surroundings. They can turn blue, gray, pink, brown or green. The mimic octopus can also flex its body to resemble more dangerous animals, such as eels and lionfish, according to the World Animal Foundation.",
+    "When scared, octopuses will shoot a dark liquid, sometimes called ink, at the thing that scared them. This will temporarily blind and confuse a potential attacker, giving the octopus time to swim away. The ink can also dull the attacker’s smelling and tasting abilities.",
+    "Octopuses can also change color to hide and match their surroundings. They can turn blue, gray, pink, brown or green. The mimic octopus can also flex its body to resemble more dangerous animals, such as eels and lionfish.",
     "If an octopus does get caught — no problem. They can lose arms and regrow them, according to National Geographic.",
     "Octopuses are carnivores, which means they eat meat. Meals can include clams, shrimp, lobsters, fish, sharks and even birds. Octopuses typically drop down on their prey, envelop it with their arms and pull the animal into their mouth.",
-    "Octopuses have short life spans. Some species only live for around six months. Other species, like the North Pacific giant octopus can live as long as five years. Typically, the larger the octopus, the longer it lives, according to the World Animal Foundation.",
+    "Octopuses have short life spans. Some species only live for around six months. Other species, like the North Pacific giant octopus can live as long as five years. Typically, the larger the octopus, the longer it lives.",
     "The standard plural in English of octopus is octopuses, according to the Oxford English Dictionary. As a word that comes from Greek, it follows Greek rules for plurals. The word 'octopi,' which follows Latin rules for plurals, is incorrect.",
     "Not all octopuses have long arms. The Opisthoteuthis adorabilis’ arms are very short and have webbing in between each one. This gives the tiny octopus the look of an orange ghost.",
     "Octopuses are about as smart as house cats. ",
@@ -222,3 +222,18 @@ const ask = {
     }
   }
 }
+
+function displayRandomOctoFact() {
+  const numberOfFacts = octo.generalFact.length;
+  const randomIndex = Math.floor(Math.random() * numberOfFacts);
+  const randomFact = octo.generalFact[randomIndex];
+  const factElement = document.getElementById("octoFact");
+  factElement.textContent = randomFact;
+}
+
+displayRandomOctoFact();
+setInterval(displayRandomOctoFact, 10000);
+
+document.getElementById("closeButton").addEventListener("click", function () {
+  document.querySelector(".slide-container").style.display = "none";
+});

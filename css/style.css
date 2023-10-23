@@ -61,6 +61,7 @@ h1 {
   font-size: 80px;
 
   margin-top: 40px;
+  margin-bottom: 5px;
 
   color: rgb(53, 53, 77);
 }
@@ -150,7 +151,66 @@ ul {
   margin: 10px;
 }
 
+ul {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* OCTO FACT */
+/* OCTO FACT */
+/* OCTO FACT */
+
+.slide-container {
+  width: 1000px;
+  height: 80px;
+
+  background-color: #d1c8ede0;
+
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: 1s ease;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide-container p {
+  margin: 0;
+}
+
+.slide-in {
+  bottom: 0;
+}
+
+.slide-container.delayed {
+  animation: slide-up 1s ease 1s forwards;
+}
+
+@keyframes slide-up {
+  to {
+    bottom: 0;
+  }
+}
+
+.close-button {
+  font-family: 'Tilt Neon', sans-serif;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  padding-right: 10px;
 }
